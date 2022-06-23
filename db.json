@@ -11,42 +11,6 @@
       "clientEmail": "jimmy@jimmy.com",
       "dogName": "Cuff",
       "id": 2
-    },
-    {
-      "clientName": "kaleigh",
-      "clientEmail": "kayleigh@kayleigh.com",
-      "dogName": "Link",
-      "id": 3
-    },
-    {
-      "clientName": "Zooch",
-      "clientEmail": "zooch@gmail.com",
-      "dogName": "Link",
-      "id": 4
-    },
-    {
-      "clientName": "wilba",
-      "clientEmail": "wilba@gmail.com",
-      "dogName": "Doggie",
-      "id": 5
-    },
-    {
-      "clientName": "sumere",
-      "clientEmail": "sumere@gmail.com",
-      "dogName": "cat",
-      "id": 6
-    },
-    {
-      "clientName": "dennis",
-      "clientEmail": "sennis@gmai.o",
-      "dogName": "dog2",
-      "id": 7
-    },
-    {
-      "clientName": "tk",
-      "clientEmail": "tk@mgail.com",
-      "dogName": "Bella",
-      "id": 8
     }
   ]
 }
