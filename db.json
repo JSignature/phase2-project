@@ -12,5 +12,27 @@
       "dogName": "Cuff",
       "id": 2
     }
+  ],
+  "templates": [
+    {
+      "id": 1,
+      "tempName": "test",
+      "tempBody": "Email test"
+    },
+    {
+      "tempName": "tempalte 1",
+      "tempBody": "email 1 jiahsdiushdfhijosjfihszjihdfzujhsivcjozsvjhzdphuhfhupfguhpdsfiuhu9h",
+      "id": 2
+    },
+    {
+      "tempName": "tempalte 2",
+      "tempBody": "Enmil 2 ajidsfsfsjhvokzvxzcv",
+      "id": 3
+    },
+    {
+      "tempName": "Template 3",
+      "tempBody": "Hello, ${clientName}",
+      "id": 4
+    }
   ]
 }
