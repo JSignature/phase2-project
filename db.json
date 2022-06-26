@@ -17,6 +17,12 @@
       "clientEmail": "dinaandreas7@gmail.com",
       "dogName": "Bella",
       "id": 3
+    },
+    {
+      "clientName": "Ho ",
+      "clientEmail": "ho@gmail.com",
+      "dogName": "Mattis",
+      "id": 4
     }
   ],
   "templates": [
@@ -29,6 +35,11 @@
       "tempName": "confirm Appointment",
       "tempBody": "Hello, ${clientsName}.\n\nWe just wanted to confirm ${dogsName} appointment on ${date} .",
       "id": 2
+    },
+    {
+      "tempName": "Change Appointment",
+      "tempBody": "Hello ${clientsName},\n\n${dogsName}'s appointment has been changed. The new date of your appointment is ${date}. We look forward to seeing you then! ",
+      "id": 3
     }
   ]
 }

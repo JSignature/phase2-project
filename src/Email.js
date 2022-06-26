@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from 'react'
-import EmailRendered from './EmailRendered'
+
 import NavBar from './NavBar'
 
 const Email = () => {
@@ -8,9 +8,9 @@ const Email = () => {
   const [filteredClient, setFilteredClient] = useState('')
   const [filteredTemplate, setFilteredTemplate] = useState('')
   const [templateProp, setTemplateProp] = useState([])
-  const [clientsName, setClientsName] = useState('')
+  const [clientsName, setClientsName] = useState('Please Select a Client')
   const [dogsName, setDogsName] = useState('')
-  const date = 2
+  const [date, setDate] = useState('Please Select a Date')
 
   function handleClientChange(e) {
     setFilteredClient(e.target.value)
@@ -20,14 +20,11 @@ const Email = () => {
     const clientPropArr = clients.filter(
       client => client.clientName === filteredClient
     )
-    console.log(clientPropArr)
+
     setClientsName(
       clientPropArr.length === 0 ? ' ' : clientPropArr[0].clientName
     )
     setDogsName(clientPropArr.length === 0 ? ' ' : clientPropArr[0].dogName)
-
-    console.log(clientsName)
-    console.log(dogsName)
   }, [filteredClient])
 
   function handleTemplateChange(e) {
@@ -43,6 +40,10 @@ const Email = () => {
 
     setTemplateProp(templatePropStr)
   }, [filteredTemplate])
+
+  function handleDateChange(e) {
+    setDate(e.target.value)
+  }
 
   useEffect(() => {
     fetch('http://localhost:4000/clients')
@@ -67,7 +68,9 @@ const Email = () => {
             {client.clientName}
           </option>
         ))}
-      </select>
+      </select>{' '}
+      <br />
+      <input type="date" name="Date" id="" onChange={handleDateChange} /> <br />
       <select name="templateFilter" id="" onChange={handleTemplateChange}>
         <option value="">Select a template</option>
         {templates.map(template => (
@@ -76,9 +79,7 @@ const Email = () => {
           </option>
         ))}
       </select>
-
       <p>{templateProp.length === 0 ? ' ' : eval('`' + templateProp + '`')}</p>
-      {/* <EmailRendered templateProp={templateProp} /> */}
     </div>
   )
 }
