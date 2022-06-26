@@ -20,19 +20,14 @@
       "tempBody": "Email test"
     },
     {
-      "tempName": "tempalte 1",
-      "tempBody": "email 1 jiahsdiushdfhijosjfihszjihdfzujhsivcjozsvjhzdphuhfhupfguhpdsfiuhu9h",
+      "tempName": "confirm Appointment",
+      "tempBody": "Hello, ${clientName}.\n\nWe just wanted to confirm ${dogName} appointment on ${date} .",
       "id": 2
     },
     {
-      "tempName": "tempalte 2",
-      "tempBody": "Enmil 2 ajidsfsfsjhvokzvxzcv",
+      "tempName": "confirm Appointment",
+      "tempBody": "tempBody",
       "id": 3
-    },
-    {
-      "tempName": "Template 3",
-      "tempBody": "Hello, ${clientName}",
-      "id": 4
     }
   ]
 }

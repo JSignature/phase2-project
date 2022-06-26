@@ -5,7 +5,7 @@ const Email = () => {
   return (
     <div>
       <NavBar />
-      <h1>Email</h1>
+      <p>Select from the inputs below</p>
     </div>
   )
 }
