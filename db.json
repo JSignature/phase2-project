@@ -11,6 +11,12 @@
       "clientEmail": "jimmy@jimmy.com",
       "dogName": "Cuff",
       "id": 2
+    },
+    {
+      "clientName": "Zooch",
+      "clientEmail": "dinaandreas7@gmail.com",
+      "dogName": "Bella",
+      "id": 3
     }
   ],
   "templates": [
@@ -23,11 +29,6 @@
       "tempName": "confirm Appointment",
       "tempBody": "Hello, ${clientName}.\n\nWe just wanted to confirm ${dogName} appointment on ${date} .",
       "id": 2
-    },
-    {
-      "tempName": "confirm Appointment",
-      "tempBody": "tempBody",
-      "id": 3
     }
   ]
 }
