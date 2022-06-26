@@ -8,20 +8,40 @@ const Email = () => {
   const [filteredClient, setFilteredClient] = useState('')
   const [filteredTemplate, setFilteredTemplate] = useState('')
   const [templateProp, setTemplateProp] = useState([])
+  const [clientsName, setClientsName] = useState('')
+  const [dogsName, setDogsName] = useState('')
+  const date = 2
 
   function handleClientChange(e) {
     setFilteredClient(e.target.value)
   }
+
+  useEffect(() => {
+    const clientPropArr = clients.filter(
+      client => client.clientName === filteredClient
+    )
+    console.log(clientPropArr)
+    setClientsName(
+      clientPropArr.length === 0 ? ' ' : clientPropArr[0].clientName
+    )
+    setDogsName(clientPropArr.length === 0 ? ' ' : clientPropArr[0].dogName)
+
+    console.log(clientsName)
+    console.log(dogsName)
+  }, [filteredClient])
+
   function handleTemplateChange(e) {
     setFilteredTemplate(e.target.value)
   }
 
   useEffect(() => {
-    const templateProp = templates.filter(
+    const templatePropArr = templates.filter(
       template => template.tempName === filteredTemplate
     )
 
-    setTemplateProp(templateProp)
+    const templatePropStr = templatePropArr.map(template => template.tempBody)
+
+    setTemplateProp(templatePropStr)
   }, [filteredTemplate])
 
   useEffect(() => {
@@ -56,7 +76,8 @@ const Email = () => {
           </option>
         ))}
       </select>
-      <p>{templateProp.length === 0 ? ' ' : templateProp[0].tempBody}</p>
+
+      <p>{templateProp.length === 0 ? ' ' : eval('`' + templateProp + '`')}</p>
       {/* <EmailRendered templateProp={templateProp} /> */}
     </div>
   )

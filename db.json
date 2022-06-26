@@ -27,7 +27,7 @@
     },
     {
       "tempName": "confirm Appointment",
-      "tempBody": "Hello, ${clientName}.\n\nWe just wanted to confirm ${dogName} appointment on ${date} .",
+      "tempBody": "Hello, ${clientsName}.\n\nWe just wanted to confirm ${dogsName} appointment on ${date} .",
       "id": 2
     }
   ]
