@@ -1,5 +1,4 @@
 import React from 'react'
-import TextField from '@mui/material/TextField'
 import Card from '@mui/material/Card'
 import CardHeader from '@mui/material/CardHeader'
 import CardContent from '@mui/material/CardContent'
@@ -8,7 +7,6 @@ import Container from '@mui/material/Container'
 import Grid from '@mui/material/Grid'
 
 const TemplateList = ({ templates }) => {
-  console.log(templates)
   return (
     <Container>
       <h1>Current Templates</h1>

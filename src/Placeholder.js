@@ -2,7 +2,6 @@ import React from 'react'
 import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
 import TextField from '@mui/material/TextField'
-import Grid from '@mui/material/Grid'
 
 const Placeholder = () => {
   return (
@@ -42,7 +41,7 @@ const Placeholder = () => {
           <TextField
             variant="outlined"
             color="primary"
-            label="Date"
+            label="Date and Time"
             value="${date}"
             focused
           />

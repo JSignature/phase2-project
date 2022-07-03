@@ -11,6 +11,7 @@ const NavlinkStyled = {
   padding: 20,
   fontSize: 50,
   float: 'right',
+  textDecoration: 'none',
 }
 
 const NavBar = () => {

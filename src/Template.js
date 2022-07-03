@@ -3,7 +3,6 @@ import NavBar from './NavBar'
 import Placeholder from './Placeholder'
 import TemplateList from './TemplateList'
 import TextField from '@mui/material/TextField'
-import { TextareaAutosize } from '@mui/material'
 import Button from '@mui/material/Button'
 import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
@@ -54,6 +53,7 @@ const Template = () => {
               autoComplete="off"
               onSubmit={handleNewTemplate}
             >
+              <h1>Add New Template</h1>
               <Grid item xs={8}>
                 <TextField
                   variant="outlined"

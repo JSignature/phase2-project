@@ -1,14 +1,12 @@
 import { React, useState, useEffect } from 'react'
 import NavBar from './NavBar'
 import ClientList from './ClientList'
-import { ClientFormStyled } from './StyledComponents/Client.styled'
 import Button from '@mui/material/Button'
 import TextField from '@mui/material/TextField'
 import Divider from '@mui/material/Divider'
 import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
 import Grid from '@mui/material/Grid'
-import Paper from '@mui/material/Grid'
 
 const Client = () => {
   const [clientName, setClientName] = useState('')
@@ -56,6 +54,7 @@ const Client = () => {
           autoComplete="off"
           onSubmit={handleNewClientSubmit}
         >
+          <h1>Add New Client</h1>
           <Grid container>
             <Grid item xs={12} md={3}>
               <TextField
@@ -101,6 +100,7 @@ const Client = () => {
           </Grid>
         </Box>
         <Divider variant="middle" />
+        <h1>Current Clients</h1>
 
         <ClientList clients={clients} />
       </Container>

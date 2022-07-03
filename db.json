@@ -29,6 +29,12 @@
       "clientEmail": "test2@gmail.com",
       "dogName": "test dog",
       "id": 5
+    },
+    {
+      "clientName": "Ernie",
+      "clientEmail": "Enrnie@erniesdogspa.com",
+      "dogName": "Cuff",
+      "id": 6
     }
   ],
   "templates": [
@@ -46,6 +52,11 @@
       "tempName": "Change Appointment",
       "tempBody": "Hello ${clientsName},\n\n${dogsName}'s appointment has been changed. The new date of your appointment is ${date}. We look forward to seeing you then! ",
       "id": 3
+    },
+    {
+      "tempName": "Appointment Request",
+      "tempBody": "Dear ${clientsName} \n\nPlease bring ${dogsName} to our location at 35 broad Ave on ${date}.",
+      "id": 4
     }
   ]
 }
