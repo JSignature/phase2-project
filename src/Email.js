@@ -1,4 +1,6 @@
+import { Container } from '@mui/system'
 import { React, useState, useEffect } from 'react'
+import Box from '@mui/material/Box'
 
 import NavBar from './NavBar'
 
@@ -59,27 +61,40 @@ const Email = () => {
   return (
     <div>
       <NavBar />
-      <h1>Email</h1>
-      <select name="clientFilter" id="" onChange={handleClientChange}>
-        <option value="">Select a client</option>
+      <Box
+        sx={{
+          height: '40vh',
+          width: '50vh',
+          border: '1px solid',
+          textAlign: 'center',
+          margin: 'auto',
+        }}
+      >
+        <h1>Email</h1>
+        <select name="clientFilter" id="" onChange={handleClientChange}>
+          <option value="">Select a client</option>
 
-        {clients.map(client => (
-          <option key={client.id} value={client.clientName}>
-            {client.clientName}
-          </option>
-        ))}
-      </select>{' '}
-      <br />
-      <input type="date" name="Date" id="" onChange={handleDateChange} /> <br />
-      <select name="templateFilter" id="" onChange={handleTemplateChange}>
-        <option value="">Select a template</option>
-        {templates.map(template => (
-          <option key={template.id} value={template.tempName}>
-            {template.tempName}
-          </option>
-        ))}
-      </select>
-      <p>{templateProp.length === 0 ? ' ' : eval('`' + templateProp + '`')}</p>
+          {clients.map(client => (
+            <option key={client.id} value={client.clientName}>
+              {client.clientName}
+            </option>
+          ))}
+        </select>{' '}
+        <br />
+        <input type="date" name="Date" id="" onChange={handleDateChange} />{' '}
+        <br />
+        <select name="templateFilter" id="" onChange={handleTemplateChange}>
+          <option value="">Select a template</option>
+          {templates.map(template => (
+            <option key={template.id} value={template.tempName}>
+              {template.tempName}
+            </option>
+          ))}
+        </select>
+        <p>
+          {templateProp.length === 0 ? ' ' : eval('`' + templateProp + '`')}
+        </p>
+      </Box>
     </div>
   )
 }

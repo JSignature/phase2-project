@@ -1,6 +1,14 @@
 import { React, useState, useEffect } from 'react'
 import NavBar from './NavBar'
 import ClientList from './ClientList'
+import { ClientFormStyled } from './StyledComponents/Client.styled'
+import Button from '@mui/material/Button'
+import TextField from '@mui/material/TextField'
+import Divider from '@mui/material/Divider'
+import Box from '@mui/material/Box'
+import Container from '@mui/material/Container'
+import Grid from '@mui/material/Grid'
+import Paper from '@mui/material/Grid'
 
 const Client = () => {
   const [clientName, setClientName] = useState('')
@@ -16,6 +24,7 @@ const Client = () => {
 
   function handleNewClientSubmit(e) {
     e.preventDefault()
+
     const newClient = {
       clientName,
       clientEmail,
@@ -35,40 +44,66 @@ const Client = () => {
   return (
     <div>
       <NavBar />
-      <form onSubmit={handleNewClientSubmit}>
-        <label htmlFor="clientName">Client's Name</label>
-        <input
-          type="text"
-          name="clientName"
-          placeholder="Enter Client's Name"
-          onChange={e => {
-            setClientName(e.target.value)
+
+      <Container>
+        <Box
+          component="form"
+          sx={{
+            '& .MuiTextField-root': { m: 3, width: '25ch' },
+            '& .MuiButton-root': { m: 4, width: '10ch' },
           }}
-        />{' '}
-        <br />
-        <label htmlFor="clientEmail">Client's Email</label>
-        <input
-          type="email"
-          name="clientEmail"
-          placeholder="Enter Client's Email"
-          onChange={e => {
-            setClientEmail(e.target.value)
-          }}
-        />{' '}
-        <br />
-        <label htmlFor="dogName">Dog's Name</label>
-        <input
-          type="text"
-          name="dogName"
-          placeholder="Enter Dog's Name"
-          onChange={e => {
-            setDogName(e.target.value)
-          }}
-        />{' '}
-        <br />
-        <button type="submit">Submit</button>
-      </form>
-      <ClientList clients={clients} />
+          noValidate
+          autoComplete="off"
+          onSubmit={handleNewClientSubmit}
+        >
+          <Grid container>
+            <Grid item xs={12} md={3}>
+              <TextField
+                onChange={e => {
+                  setClientName(e.target.value)
+                }}
+                id="outlined-number"
+                label="Client's Name"
+                InputLabelProps={{
+                  shrink: true,
+                }}
+              />
+            </Grid>
+            <Grid item xs={12} md={3}>
+              <TextField
+                onChange={e => {
+                  setClientEmail(e.target.value)
+                }}
+                id="outlined-number"
+                label="Client's Email"
+                InputLabelProps={{
+                  shrink: true,
+                }}
+              />
+            </Grid>
+            <Grid item xs={12} md={3}>
+              <TextField
+                onChange={e => {
+                  setDogName(e.target.value)
+                }}
+                id="outlined-number"
+                label="Dog's Name"
+                InputLabelProps={{
+                  shrink: true,
+                }}
+              />
+            </Grid>
+            <Grid item xs={12} md={3}>
+              <Button variant="contained" type="submit">
+                Submit
+              </Button>
+            </Grid>
+          </Grid>
+        </Box>
+        <Divider variant="middle" />
+
+        <ClientList clients={clients} />
+      </Container>
     </div>
   )
 }

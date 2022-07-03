@@ -1,16 +1,53 @@
 import React from 'react'
+import Box from '@mui/material/Box'
+import Container from '@mui/material/Container'
+import TextField from '@mui/material/TextField'
+import Grid from '@mui/material/Grid'
 
 const Placeholder = () => {
   return (
     <div style={{ border: 1 }}>
-      <label htmlFor="clientName">Client Name </label>
-      <input type="text" name="clientName" id="" value="${clientsName}" />
-      <br />
-      <label htmlFor="dogName">Dog's Name </label>
-      <input type="text" name="dogName" id="" value="${dogsName}" />
-      <br />
-      <label htmlFor="date">Date </label>
-      <input type="text" name="date" id="" value="${date}" />
+      <Container>
+        <Box
+          component="form"
+          sx={{
+            bgcolor: '#ebfbff',
+
+            '& .MuiTextField-root': { m: 3, width: '25ch' },
+            '& .MuiButton-root': { m: 4, width: '10ch' },
+          }}
+          noValidate
+          autoComplete="off"
+        >
+          <h1 style={{ textAlign: 'center' }}> Placeholders</h1>
+
+          <TextField
+            variant="outlined"
+            color="primary"
+            label="Client Name"
+            value="${clientsName}"
+            focused
+          />
+          <br />
+
+          <TextField
+            variant="outlined"
+            color="primary"
+            label="Dog's Name"
+            value="${dogsName}"
+            focused
+          />
+          <br />
+
+          <TextField
+            variant="outlined"
+            color="primary"
+            label="Date"
+            value="${date}"
+            focused
+          />
+        </Box>
+      </Container>
     </div>
   )
 }
