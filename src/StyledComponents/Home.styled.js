@@ -23,3 +23,11 @@ export const HomeH2 = styled.h2`
   background-color: orange;
   opacity: 0.75;
 `
+export const ContentCard = styled.div`
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  margin: 80px;
+  padding: 60px;
+`
