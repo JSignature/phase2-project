@@ -4,7 +4,7 @@ export const ComputerImage = styled.img`
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 60%;
+  width: 35%;
 `
 
 export const HomeH1 = styled.h1`

@@ -28,6 +28,11 @@ const Client = () => {
       clientEmail,
       dogName,
     }
+
+    setClientEmail('')
+    setClientName('')
+    setDogName('')
+
     fetch('http://localhost:4000/clients', {
       method: 'POST',
       headers: {
